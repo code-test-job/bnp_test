@@ -23,7 +23,7 @@ def long_calculation(param: int) -> int:
 @app.get('/long-calculation')
 async def perform_long_calculation(param: int):
     if param < 0:
-        return JSONResponse({'error': 'Le paramètre doit être un entier positif'}, status_code=400)
+        return JSONResponse({'error': 'Parameter must be a positive integer'}, status_code=400)
 
     factorial_result = str(long_calculation(param)).rstrip('0').rstrip('.')
     
